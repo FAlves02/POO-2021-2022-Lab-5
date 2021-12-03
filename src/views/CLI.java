@@ -46,6 +46,27 @@ public class CLI {
                         System.out.println("Dados de cliente alterados com sucesso.");
                     }
                     break;
+                case "LC":
+                    break;
+
+                case "NC":
+                    break;
+
+                case "PC":
+                    break;
+
+                case "M":
+                    break;
+
+                case "SC":
+                    break;
+
+                case "G":
+                    break;
+
+                case "L":
+                    break;
+
                 default:
                     System.out.println("Instrução inválida.");
             }
