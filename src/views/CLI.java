@@ -98,6 +98,25 @@ public class CLI {
                         System.out.println("Conta partilhada com sucesso.");
                     }
                     break;
+
+                case "m":
+                    String NumId = commands[1];
+                    String TipoId = commands[2];
+                    String IdentificadorConta=commands[3];
+                    double Montante= Double.parseDouble(commands[4]);
+                    if(!bank.hasClient(clientId, clientIdType) || !bank.hasClients(sharedClientId,sharedClientIdType)){
+                        System.out.println("Cliente Inexistente.");
+                    }
+                    else if(!bank.hasAccount(accountId)){
+                        System.out.println("Conta Inexistente.");
+
+                    }
+                    else{
+                        bank.registerCashFlow(NumId, TipoId, IdentificadorConta, Montante);
+                        System.out.println("Movimento efetuado com sucesso");
+                    }
+
+                    break;
                 default:
                     System.out.println("Instrução inválida.");
             }
